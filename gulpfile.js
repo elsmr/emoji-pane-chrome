@@ -1,8 +1,8 @@
-import gulp from 'gulp';
-import gulpLoadPlugins from 'gulp-load-plugins';
-import del from 'del';
-import runSequence from 'run-sequence';
-import {stream as wiredep} from 'wiredep';
+const gulp = require('gulp');
+const gulpLoadPlugins = require('gulp-load-plugins');
+const del = require('del');
+const runSequence = require('run-sequence');
+const wiredep = require('wiredep').stream;
 
 const $ = gulpLoadPlugins();
 
@@ -83,6 +83,7 @@ gulp.task('babel', () => {
       .pipe($.babel({
         presets: ['es2015']
       }))
+      .pipe($.browserify())
       .pipe(gulp.dest('app/scripts'));
 });
 
@@ -127,6 +128,12 @@ gulp.task('build', (cb) => {
     'lint', 'babel', 'chromeManifest',
     ['html', 'images', 'extras'],
     'size', cb);
+});
+
+gulp.task('copy-css', () => {
+  return gulp
+    .src('node_modules/emoji-pane/dist/css/emojiPane.css')
+    .pipe(gulp.dest('app/styles'))
 });
 
 gulp.task('default', ['clean'], cb => {

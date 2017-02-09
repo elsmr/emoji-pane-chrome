@@ -1,0 +1,121 @@
+.category-list {
+  overflow-y: auto; }
+
+.category-list::-webkit-scrollbar {
+  display: none; }
+
+.category-switcher {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 0.5em;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.category-switcher__item {
+  font-family: "Apple Color Emoji", "Noto Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 0.3em;
+  transition: background-color 0.2s linear;
+  border-radius: 1em;
+  cursor: pointer;
+  flex-basis: 11.11%; }
+
+.category-switcher__item:hover {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.category-switcher__item--selected {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.emoji {
+  font-size: 21px;
+  display: flex;
+  font-family: "Apple Color Emoji", "Noto Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0.2em 0.1em;
+  padding: 0.2em;
+  min-width: 1ch;
+  min-height: 1ch;
+  overflow: hidden;
+  transition: background-color 0.2s linear;
+  border-radius: 0.4em;
+  cursor: pointer;
+  flex-basis: 31%;
+  justify-content: center; }
+
+@media (min-width: 12em) {
+  .emoji {
+    flex-basis: 23%; } }
+
+@media (min-width: 14em) {
+  .emoji {
+    flex-basis: 18%; } }
+
+@media (min-width: 16em) {
+  .emoji {
+    flex-basis: 14%; } }
+
+.emoji:hover, .emoji--selected {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.category + .category {
+  margin-top: 1em; }
+
+.category__title {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  padding: 0.2em 0.5em; }
+
+.emoji-panel__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  height: inherit;
+  overflow-y: auto;
+  justify-content: space-between;
+  align-items: center; }
+
+.emoji-panel__list__message {
+  font-size: 14px;
+  margin: 2em 0; }
+
+a {
+  color: initial;
+  text-decoration: none; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.emoji-pane {
+  font-family: -apple-system, BlinkMacSystemFont, Ubuntu, Cantarell, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-width: 10em;
+  max-width: 20em;
+  max-height: 24em; }
+
+.search-bar {
+  width: 100%;
+  margin-bottom: 0.5em; }
+
+.search-bar__input {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  transition: border 0.3s ease-in-out;
+  border-radius: 3px; }
+
+.search-bar__input:focus {
+  border: 1px solid rgba(66, 134, 244, 0.8);
+  outline: none; }
+
+.emoji-pane__results {
+  overflow-y: auto; }
+
+.emoji-pane__results::-webkit-scrollbar {
+  display: none; }

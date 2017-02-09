@@ -45,6 +45,12 @@
     }
   },
   "dependencies": {
-    "emoji-pane": "^0.1.2"
+    "babel-preset-react": "^6.22.0",
+    "browserify": "^14.0.0",
+    "emoji-pane": "^0.1.2",
+    "gulp-browserify": "^0.5.1",
+    "mousetrap": "^1.6.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   }
 }
